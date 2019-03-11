@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/server/bootstrap.js",
-    "run": "run-s build prod",
+    "serve": "run-s build prod",
     "prod": "node dist/server/server/bootstrap.js",
     "build": "run-p build-client build-server",
     "build-client": "webpack --config ./webpack.config.js --mode production",

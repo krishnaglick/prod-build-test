@@ -6,26 +6,8 @@ import serverRenderer from "./middleware/renderer";
 
 const PORT = 3000;
 
-const webpackConfig = require("../../webpack.config");
-const webpackDevMiddleware = require("webpack-dev-middleware");
-const webpack = require("webpack");
-
-const compiler = webpack(webpackConfig);
-
 // Initialize the application and create the routes
 const app = express();
-
-app.use(
-  webpackDevMiddleware(
-    compiler /* , {
-    logLevel: 'silent',
-    publicPath: '/dist/web',
-    writeToDisk(filePath) {
-      return /dist\/node\//.test(filePath) || /loadable-stats/.test(filePath)
-    },
-  } */
-  )
-);
 
 app.use(bodyParser.json());
 app.use(cors());
