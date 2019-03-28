@@ -1,0 +1,25 @@
+{
+    "plugins": ["stylelint-prettier"],
+    "rules": {
+        "prettier/prettier": true,
+        "block-no-empty": null,
+        "color-no-invalid-hex": true,
+        "comment-empty-line-before": [
+            "always",
+            {
+                "ignore": ["stylelint-commands", "after-comment"]
+            }
+        ],
+        "declaration-colon-space-after": "always-single-line",
+        "declaration-colon-newline-after": "always-multi-line",
+        "max-empty-lines": 2,
+        "rule-empty-line-before": [
+            "always",
+            {
+                "except": [],
+                "ignore": ["after-comment", "first-nested"]
+            }
+        ],
+        "unit-blacklist": "px"
+    }
+}
